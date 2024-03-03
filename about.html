@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <title>Guro Velizy mall</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- OwlCarousel2 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <!-- OwlCarousel2 JS -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="js/custom.js"></script>
+
+  
+
+  
+  <script>
+    function showOrderModal() {
+      // 표시할 모달 내용 생성
+      var modalContent = `
+        <h2>Product Information</h2>
+        <img src="./images/product (13).jpg" alt="">
+        <p>우아한 그린</p>
+        <p>Price: $20.99</p>
+      `;
+
+      // 모달 내용 업데이트
+      $("#selectedProducts").html(modalContent);
+
+      // 모달 보이기
+      $("#orderModal").show();
+    }
+    function confirmOrder() {
+    // 이름과 배송지 주소 입력 값 가져오기
+    var recipientName = $("#recipientName").val();
+    var deliveryAddress = $("#deliveryAddress").val();
+
+    // 입력 여부 확인
+    if (recipientName === "" || deliveryAddress === "") {
+      // 입력되지 않았을 경우 알림 표시
+      alert('이름과 배송지 주소를 입력해주세요.');
+    } else {
+      // 주문 완료 알림 표시
+      alert('감사합니다. 주문이 완료 되었습니다!');
+      
+      // 모달 숨기기
+      $("#orderModal").hide();
+    }
+  }
+
+  $(document).ready(function() {
+    // 쇼핑 계속하기 버튼 클릭 시 service.html로 이동
+    $("#continueShoppingBtn").click(function() {
+      window.location.href = "service.html";
+    });
+
+    // 취소 버튼 클릭 시 모달 닫기
+    $("#closeModal").click(function() {
+      $("#orderModal").hide();
+    });
+
+    // 모달 외부 클릭 시 모달 닫기
+    $(window).click(function(event) {
+      var modal = $("#orderModal");
+      if (event.target === modal[0]) {
+        modal.hide();
+      }
+    });
+  });
+  </script>
+
+  <style>
+    table.cart__list thead tr {
+      font-weight: bold;
+    }
+
+    table.cart__list tfoot tr td button {
+      margin-left: 10px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 600px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>Guro Velizy mall</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="service.html">Category</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="about.html"> Cart</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Membership</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="detail-box">
+            <h2>
+              About us
+            </h2>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomisedThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6">
+          <div class="img-box">
+            <!-- <img src="images/about-img.jpg" alt=""> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cart -->
+  <section class="cart">
+    <div class="cart__information">
+        <ul>
+            <li>장바구니 상품은 최대 30일간 저장됩니다.</li>
+            <li>가격, 옵션 등 정보가 변경된 경우 주문이 불가할 수 있습니다.</li>
+            <li>오늘출발 상품은 판매자 설정 시점에 따라 오늘출발 여부가 변경될 수 있으니 주문 시 꼭 다시 확인해 주시기 바랍니다.</li>
+        </ul>
+    </div>
+    <table class="cart__list">
+        <form>
+            <thead>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td colspan="2">상품정보</td>
+                    <td>옵션</td>
+                    <td>상품금액</td>
+                    <td>배송비</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cart__list__detail">
+                    <td><input type="checkbox"></td>
+                    <td><img src="./images/product (13).jpg" alt="magic keyboard"></td>
+                    <td><a href="#">Guro Velizy mall</a><span class="cart__list__smartstore"> 스마트스토어</span>
+                        <p>우아한 그린</p>
+                        <sapn class="price">$20.99</sapn>
+                        <span style="text-decoration: line-through; color: lightgray;">$33.58</span>
+                    </td>
+                    <td class="cart__list__option">
+                        <p>상품 주문 수량: 1개 </p>
+                        <button class="cart__list__optionbtn">주문조건 추가/변경</button>
+                    </td>
+                    <td><span class="price">$20.99</span><br>
+                        <button class="cart__list__orderbtn">주문하기</button>
+                    </td>
+                    <td>무료</td>
+                </tr>
+                <tr class="cart__list__detail">
+                    <td style="width: 2%;"><input type="checkbox"></td>
+                    <td style="width: 13%;">
+                        <img src="./images/product (8).jpg" alt="magic mouse">
+                    </td>
+                    <td style="width: 27%;"><a href="#">Guro Velizy mall</a><span class="cart__list__smartstore"> 스마트스토어</span>
+                        <p>내일부터 곰의 민족 뽀글이</p>
+                        <span class=" price">$20.99</span>
+                        <span style="text-decoration: line-through; color: lightgray;">$38.41</span>
+                    </td>
+                    <td class="cart__list__option" style="width: 27%;">
+                        <p>상품 주문 수량: 1개</p>
+                        <button class="cart__list__optionbtn">주문조건 추가/변경</button>
+                    </td>
+                    <td style="width: 15%;"><span class="price">$20.99</span><br>
+                        <button class="cart__list__orderbtn">주문하기</button>
+                    </td>
+                    <td style="width: 15%;">무료</td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </form>
+    </table>
+    <div class="cart__mainbtns">
+      <button id="continueShoppingBtn" class="cart__bigorderbtn left">쇼핑 계속하기</button>
+      <button class="cart__list__orderbtn" onclick="showOrderModal()">전체 주문하기</button>
+    </div>
+</section>
+
+<!-- 모달 창 -->
+<div class="modal" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel">주문 정보 확인</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- 체크된 상품 정보 표시 -->
+        <div id="selectedProducts"></div>
+
+        <!-- 받는 사람 정보 입력 폼 -->
+        <div class="form-group">
+          <label for="recipientName">받는 사람 이름</label>
+          <input type="text" class="form-control" id="recipientName" placeholder="이름을 입력하세요">
+        </div>
+
+        <!-- 배송지 주소 입력 폼 -->
+        <div class="form-group">
+          <label for="deliveryAddress">배송지 주소</label>
+          <input type="text" class="form-control" id="deliveryAddress" placeholder="주소를 입력하세요">
+        </div>
+
+        <!-- 결제 수단 선택 -->
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="paymentMethod" id="creditCard" checked>
+          <label class="form-check-label" for="creditCard">카드 결제</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="paymentMethod" id="bankTransfer">
+          <label class="form-check-label" for="bankTransfer">계좌 간편결제</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button> -->
+        <button type="button" class="btn btn-primary" id="placeOrder" onclick="confirmOrder()">주문 완료</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>

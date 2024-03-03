@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+<!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <title>Guro Velizy mall</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <script>
+    $(document).ready(function () {
+      // 최상단으로 이동하는 버튼 보이기/숨기기 처리
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('#scrollTopBtn').fadeIn();
+        } else {
+          $('#scrollTopBtn').fadeOut();
+        }
+      });
+  
+      // 최상단으로 이동하는 애니메이션 처리
+      $('#scrollTopBtn').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+      });
+  
+      // 장바구니에 담길 때의 처리 함수
+      function addToCart(productName, price, discount) {
+        // 모달 창에 상품 정보 표시
+        $('#cartMessage').html('장바구니에 상품이 담겼습니다!<br>제품명: ' + 
+        productName + '<br>가격: $' + price + '<br>할인율: ' + discount + '%');
+  
+        // 모달 창 띄우기
+        $('#cartModal').modal('show');
+      }
+  
+      $('.add-to-cart').click(function () {
+        // 해당 상품 정보를 가져와서 addToCart 함수 호출
+        var productContainer = $(this).closest('.product');
+        var productName = productContainer.find('p:first-child').text();
+        var price = parseFloat(productContainer.find('p:nth-child(2)').text().replace('Price: $', ''));
+        var discount = parseFloat(productContainer.find('p:nth-child(3)').text().replace('Sale: ', '').replace('% off', ''));
+  
+        addToCart(productName, price, discount);
+      });
+    });
+
+    //장바구니로 이동하기 버튼을 누르면 장바구니 페이지로 이동
+    $(document).ready(function() {
+    $("#goToCartBtn").on("click", function() {
+      window.location.href = 'about.html';
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Guro Velizy mall
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="service.html">Category</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="about.html"> Cart</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Membership</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="container ">
+      <div class="heading_container heading_center">
+        <h2> Our Services </h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s1.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Maintenance
+              </h5>
+              <p>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s2.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Electrical
+              </h5>
+              <p>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s3.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Plumbing
+              </h5>
+              <p>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="Category">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="./images/product (1).jpg" alt="Product 1">
+        <div class="product-info">
+            <p>나는야 곰탱이 털옷</p>
+            <p>Price: $20.99</p>
+            <p>Sale: 60% off</p>
+            <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+      <img src="./images/product (2).jpg" alt="Product 1">
+      <div class="product-info">
+          <p>나는 얼어죽어도 코트</p>
+          <p>Price: $20.99</p>
+          <p>Sale: 30% off</p>
+          <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+      </div>
+  </div>
+
+  <div class="product">
+    <img src="./images/product (3).jpg" alt="Product 1">
+    <div class="product-info">
+        <p>얼어죽기 싫으니까 무스탕</p>
+        <p>Price: $20.99</p>
+        <p>Sale: 57% off</p>
+        <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (4).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>살고 싶으니까 패딩</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 10% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (5).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>실내용 패딩</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 37% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (6).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>오로지 엣지만을 위한 코트</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 74% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (7).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>좀 더 업그레이드 된 패딩</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 40% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (8).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>내일부터 곰의 민족 뽀글이</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 83% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (9).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>간지 추가한 무스탕</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 58% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (10).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>코트인줄 알았지만 사실 무스탕</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 60% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (11).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>무난한 패딩</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 74% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (12).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>백화점 가서 환불 잘 할것 같은 옷</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 80% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (13).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>우아한 그린</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 60% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (14).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>무난함의 정석 패딩</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 84% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="./images/product (15).jpg" alt="Product 1">
+  <div class="product-info">
+      <p>곰의 민족 털코트</p>
+      <p>Price: $20.99</p>
+      <p>Sale: 38% off</p>
+      <button class="add-to-cart" onclick="addToCart('Product Name 1', 20.99, 10)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">장바구니 안내</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="cartMessage">장바구니에 상품이 담겼습니다!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="goToCartBtn">장바구니로 이동하기</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+   
+  </div>
+    <div class="social-box"></div>
+  </section>
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+
+  <div id="scrollTopBtn" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer; display: none;">
+    Top
+  </div>
+</body>
+</html>

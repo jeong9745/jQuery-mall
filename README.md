@@ -13,7 +13,9 @@
 
 
 # 기술 스택
-![jQuery-mall](https://github.com/jeong9745/jQuery-mall/assets/156148169/5db167b4-943c-4bbe-9841-e710ea6f5daa)
+![html](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+![jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
 # 주요 기능
 
@@ -22,8 +24,7 @@
 - 주문이 들어오면 예상 조리 시간을 선택해야 한다.
 - 주문이 들어오면 주문을 수락하거나 거절할 수 있다.
 
-
-https://github.com/jeong9745/jQuery-mall/assets/156148169/d0533ef0-93f4-4206-9408-bbb786b1dfb2
+![309559121-d0533ef0-93f4-4206-9408-bbb786b1dfb2](https://github.com/jeong9745/jQuery-mall/assets/156148169/c0427fb6-1935-43f9-a536-f85482e78ffc)
 
 https://github.com/jeong9745/jQuery-mall/assets/156148169/2c0a0537-e6ed-4858-b745-2f02c25b9656
 
@@ -34,8 +35,7 @@ https://github.com/jeong9745/jQuery-mall/assets/156148169/2c0a0537-e6ed-4858-b74
 - ID 와 PW를 비교하고, 저장된 정보가 아니라면 신규 회원으로 간주한다.
 - 회원가입 페이지로 전환되면서 e-mail 을 추가로 작성하는 입력란이 뜬다. 
 
-
-https://github.com/jeong9745/jQuery-mall/assets/156148169/ed86a5c1-60c0-47b5-b65a-03e3914d8978
+![309559135-ed86a5c1-60c0-47b5-b65a-03e3914d8978](https://github.com/jeong9745/jQuery-mall/assets/156148169/763abb5b-2caa-43b7-8451-b78332eea162)
 
 
 

@@ -11,11 +11,14 @@
 > 23.11.24 ~ 23.12.04 (1.5주) \
 > 풀스택 1명
 
+<br/>
 
 # 기술 스택
 ![html](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 ![jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+
+<br/>
 
 # 주요 기능
 
@@ -28,17 +31,13 @@
 
 https://github.com/jeong9745/jQuery-mall/assets/156148169/2c0a0537-e6ed-4858-b745-2f02c25b9656
 
-
-
-
 ### 특정 조건 만족 시 숨겨진 입력 창 띄우기
 - ID 와 PW를 비교하고, 저장된 정보가 아니라면 신규 회원으로 간주한다.
 - 회원가입 페이지로 전환되면서 e-mail 을 추가로 작성하는 입력란이 뜬다. 
 
 ![309559135-ed86a5c1-60c0-47b5-b65a-03e3914d8978](https://github.com/jeong9745/jQuery-mall/assets/156148169/763abb5b-2caa-43b7-8451-b78332eea162)
 
-
-
+<br/>
 
 # 추가 구현하고 싶은 기능
 
